@@ -10,9 +10,11 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.text.PDFTextStripper;
 
+import java.util.StringTokenizer;;
+
 public class PDFManager {
 	
-	private PDFParser parser;
+	   private PDFParser parser;
 	   private PDFTextStripper pdfStripper;
 	   private PDDocument pdDoc ;
 	   private COSDocument cosDoc ;
@@ -53,6 +55,10 @@ public class PDFManager {
 	        this.filePath = filePath;
 	    }
 	    
+	    public void countString (){
+	    	StringTokenizer st = new StringTokenizer(Text);
+	    	System.out.println("La Cantidada de palabras de su texto es " + st.countTokens());
+	    }
 	    public void createPDFEmpty (){
 	    	System.out.println("Create Simple PDF file with blank Page");
 	        
