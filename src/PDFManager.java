@@ -26,6 +26,7 @@ public class PDFManager {
 	    public PDFManager() {
 	        
 	    }
+	    
 	   public String ToText() throws IOException
 	   {
 	       this.pdfStripper = null;
@@ -57,7 +58,7 @@ public class PDFManager {
 	    
 	    public void countString (){
 	    	StringTokenizer st = new StringTokenizer(Text);
-	    	System.out.println("La Cantidada de palabras de su texto es " + st.countTokens());
+	    	System.out.println("La Cantidad de palabras de su texto es " + st.countTokens());
 	    }
 	    public void createPDFEmpty (){
 	    	System.out.println("Create Simple PDF file with blank Page");
