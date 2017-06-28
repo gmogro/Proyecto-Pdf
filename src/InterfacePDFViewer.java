@@ -2,6 +2,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.awt.Button;
+import java.awt.Desktop;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
@@ -59,6 +60,16 @@ public class InterfacePDFViewer {
 		frame.getContentPane().add(bttCrearpdf);
 		
 		bttMostrarpdf = new Button("Mostrar PDF");
+		bttMostrarpdf.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+				     File path = new File ("D:\\test.pdf");
+				     Desktop.getDesktop().open(path);
+				}catch (IOException ex) {
+				     ex.printStackTrace();
+				}
+			}
+		});
 		bttMostrarpdf.setBounds(166, 23, 97, 22);
 		frame.getContentPane().add(bttMostrarpdf);
 		
